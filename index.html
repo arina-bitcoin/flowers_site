@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="./slider.css"/>
+    <title>Document</title>
+</head>
+<body>
+    Привет, ты попал на мою страницу, где я рассказываю о цветах !
+    <div class="sticky">I am sticky!</div>
+    <center><h1>Хризантемы</h1></center>
+    <center>
+        <div >
+            <button class="button1" onclick="prev()"> Prev </button>
+            <img id="slider" src='https://i2.wp.com/img0.liveinternet.ru/images/attach/c/6/91/566/91566072_0c0ff2d5f06947954f17ccbe4a090474.jpg'/>
+            <button class='button2' onclick="next()"> Next </button>
+        </div>
+        <script src="./slider.js"></script>
+    </center>
+    <p>Опрос:</p>
+    Арина любит цветы?
+    <form name="question1">
+        <input class = 'r0' type="radio" name="answer" value="a1">Однозначно да
+        <br/><input class = 'r1'type="radio" name="answer" value="a2">Нет
+        <br/><input class1 = 'r1'type="radio" name="answer" value="a3">Без понятия
+        <!--<br/>Как вы относитесь к цветам?
+        <br/><input type="text" name="login" style="width:400px;" value="Значение по умолчанию">
+        <br/>Какое мнение у вас об этом сайте?
+        <br/><input style="width:400px; height:150px" type="textarea" name="osebe" value="">-->
+        <br/><input type="submit" name='ok' value="OK">
+    </form>
+<script>
+var enabledBox = document.question1.ok;
+let a
+function onclick(e){
+    let r = document.question1.answer
+    a = r.value == 'a1'
+    if (r.value == 'a1') {
+        document.question1.style = 'color: green'
+    }
+    else {
+        document.question1.style = 'color: red'
+    }
+    e.preventDefault();
+}
+enabledBox.addEventListener("click", onclick);
+</script>
+<p>А сейчас небольшой тест о хризантемах:</p>
+С какими цветами они живут хорошо?
+    <form name="question2">
+        <input type="radio" name="answer" value="a1">с ромашками
+        <br/><input type="radio" name="answer" value="a2">с лютиками
+        <br/><input type="radio" name="answer" value="a3">с геоцинтами
+        <br/><input type="radio" name="answer" value="a4">с ирисами
+        <br/><input type="radio" name="answer" value="a5">с пионами
+        <br/><input type="submit" value="OK" name = 'ok'>
+    </form>
+    <script>
+        var enabledBox = document.question2.ok;
+         let b
+        function onclick(e){
+            let r = document.question2.answer
+            b = r.value == 'a5'
+            if (r.value == 'a5') {
+                document.question2.style = 'color: green'
+            }
+            else {
+                document.question2.style = 'color: red'
+            }
+            e.preventDefault();
+        }
+        enabledBox.addEventListener("click", onclick);
+        </script>
+    <br/>
+    Сколько всего видов хризантем?
+    <form name ='question3'>
+        <input type="radio" name="answer" value="a1">10
+        <br/><input type="radio" name="answer" value="a2">40
+        <br/><input type="radio" name="answer" value="a3">100
+        <br/><input type="radio" name="answer" value="a4">200
+        <br/><input type="radio" name="answer" value="a5">500
+        <br/><input type="submit" value="OK" name = 'ok'>
+    </form>
+    <script>
+        var enabledBox = document.question3.ok;
+         let c
+        function onclick(e){
+            let r = document.question3.answer
+            c = r.value == 'a4'
+            if (r.value == 'a4') {
+                document.question3.style = 'color: green'
+            }
+            else {
+                document.question3.style = 'color: red'
+            }
+            let g = 0
+            e.preventDefault();
+        }
+        enabledBox.addEventListener("click", onclick);
+        </script>
+        <br/>
+</body>
+</html>
